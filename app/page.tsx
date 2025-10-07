@@ -1,25 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 
 const products = [
   {
     id: 1,
-    title: "Product Model X1",
+    title: "Plastic Bush",
     desc: "High-performance drone built for efficiency, speed, and sustainability.",
     img: "/Product-1.jpg",
   },
   {
     id: 2,
-    title: "Product Model A2",
+    title: "AUTO Parts",
     desc: "Lightweight drone optimized for aerial photography and smooth controls.",
     img: "/Product-2.jpg",
   },
   {
     id: 3,
-    title: "Product Model Z3",
+    title: "Drone Canopy",
     desc: "Heavy-duty industrial drone designed for cargo and logistics.",
     img: "/Product-3.jpg",
   },
@@ -105,9 +106,9 @@ export default function Home() {
               disaster management. Our mission is to make drones smarter,
               safer, and more sustainable.
             </p>
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">
+            <Link href="/about" className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">
               Discover More
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -177,12 +178,12 @@ export default function Home() {
             <div className="p-6">
               <h3 className="text-2xl font-semibold mb-2">{p.title}</h3>
               <p className="text-gray-600 mb-4">{p.desc}</p>
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
               >
                 View Details
-              </motion.button>
+              </motion.button> */}
             </div>
           </motion.div>
         ))}
