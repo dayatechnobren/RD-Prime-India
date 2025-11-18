@@ -13,25 +13,43 @@ export default function ContactPage() {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  const { name, value } = e.target;
-  setFormData({ ...formData, [name]: value });
-};
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setSubmitted(true);
-};
+    e.preventDefault();
+
+    // you can plug API logic here later 🔥
+    setSubmitted(true);
+
+    // reset fields after submit
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3500);
+  };
 
   return (
     <section className="bg-gray-50 py-20 px-6">
+      {/* Header */}
       <div className="max-w-5xl mx-auto text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
           Contact Us
         </h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Have a question about RD Prime Drone, partnerships, or custom drone solutions?  
-          We did love to hear from you. Fill out the form below and our team will reach out soon.
+          Have a question about RD Prime Drone, partnerships, or custom drone
+          solutions?  
+          We’d love to get in touch — drop us a message and the team will reach out soon.
         </p>
       </div>
 
@@ -46,15 +64,20 @@ export default function ContactPage() {
           <h2 className="text-2xl font-semibold mb-6 text-gray-900">
             Get in Touch
           </h2>
-          <p className="text-gray-600 mb-6">
-            We are available Monday–Saturday, 9 AM to 6 PM.  
-            Reach out to us for technical queries, collaborations, or demo requests.
+          <p className="text-gray-600 mb-6 leading-relaxed">
+            We’re available Monday–Saturday, 9 AM to 6 PM.  
+            Reach out for technical queries, collaborations, demos — literally anything drone-related.
           </p>
 
           <div className="space-y-4 text-gray-700">
             <div>
               <h4 className="font-semibold text-gray-900">Office Address</h4>
-              <p>RD Prime Innovations Pvt. Ltd.<br />Gate No.01, Triveni Complex, Goverdhan Road, Mathura, Uttar Pradesh – 281004</p>
+              <p>
+                RD Prime Innovations Pvt. Ltd.<br />
+                Gate No.01, Triveni Complex,<br />
+                Goverdhan Road, Mathura,<br />
+                Uttar Pradesh – 281004
+              </p>
             </div>
             <div>
               <h4 className="font-semibold text-gray-900">Phone</h4>

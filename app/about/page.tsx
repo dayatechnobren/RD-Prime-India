@@ -15,8 +15,8 @@ export default function About() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1500&q=80')",
-            backgroundSize: "100%",
+              "url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1500&q=80')",
+            backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
@@ -38,18 +38,24 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl font-bold mb-6">Who We Are 🚀</h2>
+          <h2 className="text-4xl font-bold mb-6">Who We Are 🏭</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            We are pioneers in <span className="font-semibold">drone
-            technology</span>, committed to building cutting-edge solutions that
-            push industries forward. From sustainable drones to advanced aerial
-            innovations, our goal is to empower communities and businesses
-            worldwide.
+            We specialize in manufacturing{" "}
+            <span className="font-semibold">
+              high-precision plastic spare parts and molded components
+            </span>{" "}
+            used across industries like drones, automotive, electronics,
+            machinery, and consumer goods. Our commitment is to deliver durable,
+            lightweight, and reliable components that enhance product
+            performance.
           </p>
+
           <p className="text-gray-700 leading-relaxed">
-            With a team of passionate engineers, creators, and innovators, we’re
-            shaping the future of drone technology—making it smarter, greener,
-            and more accessible.
+            With advanced molding technologies and a dedicated engineering team,
+            we ensure every component meets strict industry standards. From
+            custom-designed drone parts to heavy-duty automotive components, we
+            focus on delivering quality, consistency, and innovation in every
+            product.
           </p>
         </motion.div>
 
@@ -60,10 +66,10 @@ export default function About() {
         >
           <Image
             src="/about-1.jpg"
-            alt="About Drone"
+            alt="About Company"
             width={600}
             height={400}
-            className="rounded-xl shadow-lg"
+            className="rounded-xl shadow-lg object-cover"
           />
         </motion.div>
       </div>
@@ -75,10 +81,13 @@ export default function About() {
             whileHover={{ scale: 1.05 }}
             className="bg-white p-8 rounded-xl shadow-md"
           >
-            <h3 className="text-2xl font-bold mb-4">🌍 Our Mission</h3>
+            <h3 className="text-2xl font-bold mb-4">🎯 Our Mission</h3>
             <p className="text-gray-600 leading-relaxed">
-              To revolutionize industries with eco-friendly drones that maximize
-              efficiency, reduce costs, and create a more sustainable future.
+              To deliver high-quality plastic spare parts and engineered
+              components that enhance reliability, reduce costs, and power the
+              next generation of innovation across industries. We aim to support
+              manufacturers with durable, precision-crafted solutions tailored
+              to their needs.
             </p>
           </motion.div>
 
@@ -86,11 +95,13 @@ export default function About() {
             whileHover={{ scale: 1.05 }}
             className="bg-white p-8 rounded-xl shadow-md"
           >
-            <h3 className="text-2xl font-bold mb-4">✨ Our Vision</h3>
+            <h3 className="text-2xl font-bold mb-4">🌟 Our Vision</h3>
             <p className="text-gray-600 leading-relaxed">
-              To be the global leader in drone innovation, shaping the future of
-              transportation, agriculture, defense, and humanitarian efforts
-              through technology.
+              To be a global leader in molded plastic components, recognized for
+              quality, innovation, and customer trust. We envision a future
+              where our products power drones, vehicles, machines, and
+              industrial systems worldwide with unmatched precision and
+              performance.
             </p>
           </motion.div>
         </div>
@@ -99,10 +110,15 @@ export default function About() {
       {/* Team Section */}
       <div className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-4xl font-bold text-center mb-12">
-          Meet Our Team 👨‍💻👩‍💻
+          Meet Our Team 👨‍🏭👩‍🏭
         </h2>
+
         <div className="grid md:grid-cols-3 gap-10">
-          {["Alex", "Maya", "Jordan"].map((name, i) => (
+          {[
+            { name: "Alex", role: "Manufacturing Engineer" },
+            { name: "Maya", role: "Product Designer" },
+            { name: "Jordan", role: "Quality Specialist" },
+          ].map((member, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }}
@@ -112,13 +128,13 @@ export default function About() {
             >
               <Image
                 src={`/team-${i + 1}.jpg`}
-                alt={name}
+                alt={member.name}
                 width={200}
                 height={200}
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
-              <h4 className="text-xl font-semibold">{name}</h4>
-              <p className="text-gray-600">Drone Specialist</p>
+              <h4 className="text-xl font-semibold">{member.name}</h4>
+              <p className="text-gray-600">{member.role}</p>
             </motion.div>
           ))}
         </div>
