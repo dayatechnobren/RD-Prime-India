@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-
 const baseProducts = [
   { id: 1, title: "Packing", img: "/gaskets.jpg" },
   { id: 2, title: "Plastic Bush", img: "/rollers.jpg" },
