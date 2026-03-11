@@ -198,9 +198,12 @@ export default function Home() {
           machines, automotive systems, and modern industrial applications.
         </p>
 
-        <button className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-lg hover:bg-gray-100">
+        <Link
+          href="/contact"
+          className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-lg hover:bg-gray-100"
+        >
           Contact Us
-        </button>
+        </Link>
       </section>
     </main>
   );

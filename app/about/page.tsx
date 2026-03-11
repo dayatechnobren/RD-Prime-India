@@ -108,6 +108,37 @@ export default function About() {
       </div>
 
       {/* Team Section */}
+     <div className="max-w-6xl mx-auto px-6 py-20">
+  <h2 className="text-4xl font-bold text-center mb-12">
+    Our Clients 👥👥
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-10">
+    {[
+      { name: "Indo wings pvt Ltd", img: "/indiwing.webp", url: "https://www.dhcpl.com/" },
+      { name: "Insta Exhibition pvt Ltd", img: "/Insta.webp", url: "https://insta-group.com/" },
+      { name: "DHCL Pvt Ltd", img: "/DHCL.jpg", url: "https://www.indowings.com/" },
+    ].map((member, i) => (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: i * 0.2 }}
+        className="bg-gray-50 rounded-xl p-6 text-center shadow-lg"
+      >
+        <Image
+          src={member.img}
+          alt={member.name}
+          width={200}
+          height={200}
+          className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+        />
+
+        <h4 className="text-xl font-semibold hover:text-red-500"><a href={member.url} target="_blank" rel="noopener noreferrer">{member.name}</a></h4>
+      </motion.div>
+    ))}
+  </div>
+</div>
       <div className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-4xl font-bold text-center mb-12">
           Meet Our Team 👨‍🏭👩‍🏭
