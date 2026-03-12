@@ -12,8 +12,8 @@ const products = [
   },
   {
     id: 2,
-    title: "Auto Parts",
-    desc: "Precision-engineered plastic components built for mobility, engine support, and automotive assembly.",
+    title: "Rubber Polymer Components",
+    desc: "Precision-engineered rubber and plastic components built for manufacturing, engine support, and automotive assembly.",
     img: "/Product-2.jpg",
   },
   {
@@ -51,7 +51,7 @@ export default function Home() {
             className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-lg"
           >
             Innovation in{" "}
-            <span className="text-blue-400">Plastic Components 🔧✨</span>
+            <span className="text-blue-400">Rubber and Plastic Components 🔧✨</span>
           </motion.h1>
 
           <motion.p
@@ -61,7 +61,7 @@ export default function Home() {
             className="mt-6 text-lg md:text-xl text-gray-100 max-w-2xl mx-auto drop-shadow"
           >
             Engineering high-precision plastic spare parts that power drones,
-            automotive systems, machinery, and next-gen industrial solutions.
+            Automobile Parts, All Rubber  and Plastic Product Manufacturing.
           </motion.p>
 
           <motion.div
@@ -180,8 +180,15 @@ export default function Home() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">{p.title}</h3>
-                <p className="text-gray-600 mb-4">{p.desc}</p>
+                <div className="p-6">
+  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+    {p.title}
+  </h3>
+
+  <p className="text-gray-700 mb-4">
+    {p.desc}
+  </p>
+</div>
               </div>
             </motion.div>
           ))}

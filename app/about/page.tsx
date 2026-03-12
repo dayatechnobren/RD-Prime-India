@@ -146,9 +146,9 @@ export default function About() {
 
         <div className="grid md:grid-cols-3 gap-10">
           {[
-            { name: "Alex", role: "Manufacturing Engineer" },
-            { name: "Maya", role: "Product Designer" },
-            { name: "Jordan", role: "Quality Specialist" },
+            { name: "Shalender Yadav", role: "Owner" },
+            { name: "Ram Akshaiwar Yadav", role: "Management" },
+            { name: "Bhupendra Yadav", role: "Forman" },
           ].map((member, i) => (
             <motion.div
               key={i}

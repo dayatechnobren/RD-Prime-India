@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const baseProducts = [
-  { id: 1, title: "Packing", img: "/gaskets.jpg" },
+  { id: 1, title: "Packing Rubber", img: "/gaskets.jpg" },
   { id: 2, title: "Plastic Bush", img: "/rollers.jpg" },
   { id: 3, title: "Bush", img: "/bushings.jpg" },
   { id: 4, title: "Flat Washer", img: "/flatWarser.jpg" },
@@ -14,6 +14,7 @@ const baseProducts = [
   { id: 8, title: "Plastic Cap", img: "/plasticCap.jpg" },
   { id: 9, title: "Silicon Packing", img: "/siliconPacking.jpg" },
   { id: 10, title: "Wire Cap", img: "/wireCap.jpg" },
+  { id: 25, title: "Rubber and Metal Bush", img: "/img25.jpeg" },
 ];
 
 // generate img11 → img46

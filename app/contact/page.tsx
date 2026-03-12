@@ -85,7 +85,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h4 className="font-semibold text-gray-900">Email</h4>
-              <p>contact@rdprimedrone.com</p>
+              <p>rdprimeindia91@gmail.com</p>
             </div>
           </div>
 
